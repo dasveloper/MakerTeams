@@ -1,0 +1,48 @@
+.input{
+    $self: &;
+    position: relative;
+    width: 100%;
+    background: $white;
+    &__label{
+        position: absolute;
+        left: .75rem;
+        top: 50%;
+        color: $gray-darkest;
+        transform: translateY(-50%);
+        font-size: .8rem;
+        background: inherit;
+        padding:  0 5px;
+        transition: color .3s ease, top .1s ease-out;
+        #{ $self }--lg & {
+            font-size: 1rem;
+        }
+        #{ $self }--focused &, {
+            font-size: .8rem;
+            color: $purple;
+            top: 0%;         
+        }
+        #{ $self }--error &, {
+            color: $red;
+        }
+    }
+    &__field{
+        padding: .5rem;
+        font-size: .8rem;
+        width: 100%;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid $gray-med;
+        transition: border-color .3s ease;
+        #{ $self }--lg & {
+            font-size: 1rem;
+            padding: 1rem .75rem;
+        }
+        #{ $self }--focused &, {
+            border-color: $purple;
+        }
+        #{ $self }--error &, {
+            border-color: $red;
+        }
+    }
+
+}

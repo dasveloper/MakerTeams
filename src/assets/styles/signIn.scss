@@ -1,0 +1,32 @@
+.signin{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gray-light;
+    flex-direction: column;
+    &__logo-wrapper{
+        width: 100px;
+    }
+    &__card{
+        background: $white;
+        padding: 1rem;
+        border-radius: 4px;
+        max-width: 500px;
+    }
+    &__input{
+        margin: .5rem 0;
+    }
+    &__submit{
+        margin: .5rem 0;
+    }
+    &__signup{
+        font-size: .8rem;
+        color: $gray-dark;
+        text-align: right;
+    }
+    &__signup-link{
+        text-decoration: none;
+    }
+}
+

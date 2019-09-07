@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./Home";
-import Login from "./Login";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Landing from "./Landing";
+import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
@@ -11,11 +11,11 @@ const App = () => {
   return (
     <AuthProvider>
       <Router>
-        <div>
-          <PrivateRoute exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
-        </div>
+        </Switch>
       </Router>
     </AuthProvider>
   );

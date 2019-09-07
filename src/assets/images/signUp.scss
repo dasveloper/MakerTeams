@@ -1,0 +1,17 @@
+.signup{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gray-light;
+    &__card{
+        background: $white;
+        padding: 1rem;
+        border-radius: 4px;
+        max-width: 450px;
+    }
+    &__input{
+        margin: .5rem 0;
+    }
+}
+

@@ -1,0 +1,55 @@
+
+@import "./colors.scss";
+@import "./nav.scss";
+@import "./landing.scss";
+@import "./signUp.scss";
+@import "./signin.scss";
+@import "./input.scss";
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.btn {
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 400;
+
+  &--block{
+    width: 100%;
+  }
+  &--lg {
+    padding: .8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  &--link {
+    background: transparent;
+    border: none;
+    &:hover{
+      color: lighten(#000, 50);
+    }
+  }
+  &--secondary {
+    background: $purple;
+    color: #fff;
+    border: none;
+    &:hover{
+      background: darken($purple, 10);
+    }
+  }
+  &--primary {
+    background: $yellow;
+    color: #fff;
+    border: none;
+    &:hover{
+      background: darken($yellow, 10);
+    }
+  }
+}
+
+
+.responsive--img {
+  max-width: 100%;
+}

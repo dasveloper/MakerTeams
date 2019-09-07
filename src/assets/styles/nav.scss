@@ -1,0 +1,13 @@
+.nav {
+    text-align: right;
+    padding: 1rem 2rem;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    &__signin,
+    &__signup {
+      margin: 0 0.5rem;
+    }
+  }
