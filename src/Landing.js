@@ -6,14 +6,21 @@ import Files from "./assets/images/files-2x.png";
 import Dashboard from "./assets/images/dashboard-2x.png";
 import Team from "./assets/images/team-2x.png";
 import Map from "./assets/images/map-2x.png";
+import List from "./assets/images/list-2x.png";
+
 import Members from "./assets/images/members-2x.png";
 import Group from "./assets/images/group.png";
 
 import { Link } from "react-router-dom";
 import Nav from "./components/Nav";
+import Typist from 'react-typist';
+import TypistLoop from 'react-typist-loop'
 
 //import Teams from "../components/Teams";
+
+
 class Landing extends Component {
+
   render() {
     return (
       <Fragment>
@@ -44,6 +51,19 @@ class Landing extends Component {
             </Row>
           </Grid>
         </section>
+        <section className="list">
+          <Grid className="list__inner">
+            <Row>
+
+              <Col md={6} className="list__image-wrapper"><img className="list__image responsive--img" src={List} />
+              </Col>
+              <Col md={6}>
+                <h2 className="list__header">Find the perfect team</h2>
+                <p className="list__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
         <section className="teams">
           <Grid>
             <Row>
@@ -58,6 +78,25 @@ class Landing extends Component {
               </Col>
             </Row>
           </Grid>
+          <div className="teams__middle">
+            <Grid>
+              <Row>
+                <p className="teams__typing-sentence">My team needs a <span className="teams__typing"><TypistLoop interval={3000}>
+                  {[
+                    'Digital Marketer',
+                    'Front End Developer',
+                    'Graphic Designer',
+                    'Database Administrator',
+                    'UX Designer',
+                    'Product Manager'
+
+                  ].map(text => <Typist className="teams__typing-text" key={text} cursor={{ blink: true }} startDelay={1000}>{text}</Typist>)}
+                </TypistLoop></span>
+                </p>
+              </Row>
+            </Grid>
+
+          </div>
           <div className="teams__bottom">
             <Grid>
               <Row>

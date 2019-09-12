@@ -74,6 +74,38 @@
   }
 
 }
+.list{
+  background: #8e2de2;
+    background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+    &__inner{
+      z-index: 1;
+      position: relative;
+    }
+    &__image-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__image{
+      margin-bottom: -100px;
+    }
+
+    &__header{
+      font-weight: 700;
+    font-size: 2.5rem;
+    color: $white;
+    }
+
+    &__body{
+      font-size: 1.4rem;
+      color: $white;
+    }
+}
 .teams {
   display: flex;
   flex-direction: column;
@@ -81,12 +113,36 @@
   &__header {
     font-weight: 700;
     font-size: 2.5rem;
-    margin: 2rem 0 0.5rem 0;
+    margin: 3rem 0 0.5rem 0;
   }
   &__description {
     font-weight: 300;
     font-size: 1.6rem;
     margin: 0.5rem 0 2rem 0;
+  }
+  &__typing-sentence{
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 300;
+
+  }
+  &__typing{
+    border-bottom: 1px solid $gray-med;
+    min-width: 300px;
+    display: inline-block;
+    padding-bottom: .25rem; 
+    margin-left:.25rem;
+  }
+  &__typing-text{
+    display: inline;
+    font-weight: 300;
+    color: $yellow;
+
+  }
+  &__middle{
+    background: $gray-light;
+    padding: 3rem 0;
   }
   &__bottom {
     background: #8e2de2;
@@ -160,7 +216,7 @@ padding: 1rem 0;
     margin: auto;
   }
  &__logo{
-   width: 500px;
+   width: 300px;
  }
  &__cta-wrapper{
    margin: auto;
