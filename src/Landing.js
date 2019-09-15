@@ -11,6 +11,10 @@ import List from "./assets/images/list-2x.png";
 import Members from "./assets/images/members-2x.png";
 import Group from "./assets/images/group.png";
 
+import Search from "./assets/images/search.png";
+import CreateTeam from "./assets/images/create-team.png";
+import AddMembers from "./assets/images/add-member.png";
+
 import { Link } from "react-router-dom";
 import Nav from "./components/Nav";
 import Typist from 'react-typist';
@@ -57,9 +61,33 @@ class Landing extends Component {
 
               <Col md={6} className="list__image-wrapper"><img className="list__image responsive--img" src={List} />
               </Col>
-              <Col md={6}>
-                <h2 className="list__header">Find the perfect team</h2>
-                <p className="list__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <Col md={6} className="list__features-wrapper">
+                <div className="list__feature">
+                  <img className="list__feature-img img-responsive" src={Search} />
+                  <div className="list__feature-inner">
+                    <p className="list__feature-header">Find a team</p>
+                    <p class="list__feature-body">Browse teams that are accepting invitations and join them.</p>
+                    {false && <p class="list__feature-body">Browse MakerTeams listings to find all teams accepting invitations for you to join. Use advanced search features to narrow it down to the team that will be the best fit for you.</p>}
+                  </div>
+                </div>
+                <div className="list__feature">
+                  <img className="list__feature-img img-responsive" src={CreateTeam} />
+
+                  <div className="list__feature-inner">
+                    <p className="list__feature-header">Create a team</p>
+                    <p className="list__feature-body">Can't find the right team for you? Create your own. </p>
+
+                  </div>
+                </div>
+                <div className="list__feature">
+                  <img className="list__feature-img img-responsive" src={AddMembers} />
+
+                  <div className="list__feature-inner">
+
+                    <p className="list__feature-header">Grow your team</p>
+                    <p class="list__feature-body">Recruit talent or accept invite requests to fill out your team.</p>
+                  </div>
+                </div>
               </Col>
             </Row>
           </Grid>
