@@ -94,6 +94,12 @@
     &__image{
       margin-bottom: -100px;
     }
+    &__header{
+      font-size: 2.8rem;
+      color: $yellow; 
+      margin:.5rem 0;
+      font-weight: 800;
+    }
     &__features-wrapper{
       display: flex;
       flex-direction: column;

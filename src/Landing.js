@@ -62,6 +62,7 @@ class Landing extends Component {
               <Col md={6} className="list__image-wrapper"><img className="list__image responsive--img" src={List} />
               </Col>
               <Col md={6} className="list__features-wrapper">
+              <h2 className="list__header">How it works</h2>
                 <div className="list__feature">
                   <img className="list__feature-img img-responsive" src={Search} />
                   <div className="list__feature-inner">
@@ -99,7 +100,7 @@ class Landing extends Component {
                 <h2 className="teams__header">Assemble the perfect team</h2>
                 <p className="teams__description">
                   Are you a front-end developer that has trouble implementing
-                  server-side logic? Or a database admin with no eye for design?
+                  server-side logic? Or a database admin with no eye for design? Maybe you need some marketing help to get your project off the ground.
                   Find your development dream team and take on projects you
                   couldn't do alone.
       </p>
