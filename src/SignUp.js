@@ -7,6 +7,8 @@ import validate from "./utils/validator";
 import { Link } from "react-router-dom";
 import Logo from "./assets/images/logo.svg";
 const SignUp = ({ history }) => {
+  const [errorMessage, setErrorMessage] = useState("");
+
   const [formIsValid, setFormValid] = useState(false);
   const [formFields, setFormFields] = useState({
     firstname: {
@@ -56,7 +58,7 @@ const SignUp = ({ history }) => {
       cssclass: "signup__input",
       validationRules: {
         isRequired: true,
-        minLength: 6
+        minLength: 6,
       }
     },
     confirmPassword: {
@@ -75,6 +77,7 @@ const SignUp = ({ history }) => {
   });
 
   const changeHandler = useCallback(event => {
+    setErrorMessage("");
 
     const name = event.target.name;
     const value = event.target.value;
@@ -116,9 +119,10 @@ const SignUp = ({ history }) => {
         lastname: lastname.value,
         email: email.value
       });
-      history.push("/");
+      history.push("/comingsoon");
     } catch (error) {
-      alert(error);
+  
+      setErrorMessage(error.message);
     }
 
   }, [history]);
@@ -207,6 +211,11 @@ const SignUp = ({ history }) => {
                   <p className="signup__signin">Already have an account? <Link className="signup__signin-link" to="signin">Sign In</Link></p>
                 </Col>
               </Row>
+              {errorMessage && <Row>
+                <Col xs={12}  >
+                  <p className="signup__error">{errorMessage}</p>
+                </Col>
+              </Row>}
             </Grid>
 
           </form>

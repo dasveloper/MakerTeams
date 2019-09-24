@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Logo from "./assets/images/logo.svg";
 
 const SignIn = ({ history }) => {
+  const [errorMessage, setErrorMessage] = useState("");
+
   const [formIsValid, setFormValid] = useState(false);
   const [formFields, setFormFields] = useState({
     email: {
@@ -48,15 +50,16 @@ const SignIn = ({ history }) => {
         await app
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
-      } catch (error) {
-        alert(error);
+          history.push("/comingsoon");
+        } catch (error) {
+        setErrorMessage(error.message);
       }
     },
     [history]
   );
 
   const changeHandler = useCallback(event => {
+    setErrorMessage("");
 
     const name = event.target.name;
     const value = event.target.value;
@@ -139,6 +142,11 @@ const SignIn = ({ history }) => {
                   <p className="signin__signup">Don't have an account? <Link className="signin__signup-link" to="signup">Sign Up</Link></p>
                 </Col>
               </Row>
+              {errorMessage && <Row>
+                <Col xs={12}  >
+                  <p className="signin__error">{errorMessage}</p>
+                </Col>
+              </Row>}
             </Grid>
           </form>
         </div>

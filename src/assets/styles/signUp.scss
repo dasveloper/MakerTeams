@@ -32,5 +32,13 @@
     &__signin-link{
         text-decoration: none;
     }
+    &__error{
+        background: rgba($red, .3);
+        border: 1px solid $red;
+        padding: 1rem;
+        font-size: .8rem;
+        border-radius: 4px;
+        color: $red;
+    }
 }
 

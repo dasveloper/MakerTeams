@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { FaTasks, FaComments, FaUserClock, FaFile } from "react-icons/fa";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import { Calendar, Users, Edit, List as ListIcon} from 'react-feather';
 
 import Files from "./assets/images/files-2x.png";
 import Dashboard from "./assets/images/dashboard-2x.png";
@@ -62,13 +62,13 @@ class Landing extends Component {
               <Col md={6} className="list__image-wrapper"><img className="list__image responsive--img" src={List} />
               </Col>
               <Col md={6} className="list__features-wrapper">
-              <h2 className="list__header">How it works</h2>
+                <h2 className="list__header">How it works</h2>
                 <div className="list__feature">
                   <img className="list__feature-img img-responsive" src={Search} />
                   <div className="list__feature-inner">
                     <p className="list__feature-header">Find a team</p>
-                    <p class="list__feature-body">Browse teams that are accepting invitations and join them.</p>
-                    {false && <p class="list__feature-body">Browse MakerTeams listings to find all teams accepting invitations for you to join. Use advanced search features to narrow it down to the team that will be the best fit for you.</p>}
+                    <p className="list__feature-body">Browse teams that are accepting invitations and join them.</p>
+                    {false && <p className="list__feature-body">Browse MakerTeams listings to find all teams accepting invitations for you to join. Use advanced search features to narrow it down to the team that will be the best fit for you.</p>}
                   </div>
                 </div>
                 <div className="list__feature">
@@ -86,7 +86,7 @@ class Landing extends Component {
                   <div className="list__feature-inner">
 
                     <p className="list__feature-header">Grow your team</p>
-                    <p class="list__feature-body">Recruit talent or accept invite requests to fill out your team.</p>
+                    <p className="list__feature-body">Recruit talent or accept invite requests to fill out your team.</p>
                   </div>
                 </div>
               </Col>
@@ -144,7 +144,7 @@ class Landing extends Component {
               <Col>
                 <h2 className="members__header">Manage your members</h2>
                 <p className="members__description">
-                  Send and recieve invitations to your team, create ranks and
+                  Send and recieve invitations to your team, create ranks, and
                   promote members, and manage permissions for each role.
                 </p>
               </Col>
@@ -173,25 +173,35 @@ class Landing extends Component {
             <Row>
               <Col xs={12} sm={6} md={3}>
                 <div className="dashboard__feature">
+                  <Edit className="dashboard__feature-icon" size={48} />
+
                   <h3 className="dashboard__feature-title">Create projects</h3>
-                  <p>View all of your team's projects for quick and easy collaboration and organization.</p>
+                  <p className="dashboard__feature-body">Create and manage your team's projects for quick and easy collaboration and organization.</p>
                 </div>
               </Col>
               <Col xs={12} sm={6} md={3}>
                 <div className="dashboard__feature">
+                  <ListIcon className="dashboard__feature-icon" size={48} />
+
                   <h3 className="dashboard__feature-title">Assign tasks</h3>
-                  <p>Itemize and prioritize tasks to be completed to make sure you meet all of your deadlines. </p>
+                  <p className="dashboard__feature-body">Itemize and prioritize tasks to be completed to make sure you meet all of your deadlines. </p>
                 </div>
               </Col>
 
               <Col xs={12} sm={6} md={3}>
+
                 <div className="dashboard__feature">
+                  <Users className="dashboard__feature-icon" size={48} />
+
                   <h3 className="dashboard__feature-title">Organize teams</h3>
+                  <p className="dashboard__feature-body">Assign team members to work together on projects that require their particular skillset.</p>
                 </div>
               </Col>
               <Col xs={12} sm={6} md={3}>
                 <div className="dashboard__feature">
+                  <Calendar className="dashboard__feature-icon" size={48} />
                   <h3 className="dashboard__feature-title">Manage schedules</h3>
+                  <p className="dashboard__feature-body">Keep track of ongoing and upcoming projects, plan meetings, and audit timesheets.</p>
                 </div>
               </Col>
             </Row>
@@ -243,9 +253,7 @@ class Landing extends Component {
             </Row>
           </Grid>
         </section>
-        <section className="footer">
-
-        </section>
+ 
       </Fragment>
     );
   }

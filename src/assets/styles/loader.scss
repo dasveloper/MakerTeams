@@ -1,0 +1,35 @@
+
+.loader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($white, .3);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__text {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        font-weight: 300;
+    }
+  
+    &__spinner {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border: 4px solid $gray-med;
+        border-radius: 50%;
+        border-top-color: $gray-darkest;
+        animation: spin 1s ease-in-out infinite;
+        -webkit-animation: spin 1s ease-in-out infinite;
+    }
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}

@@ -6,6 +6,7 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
+import ComingSoon from "./ComingSoon";
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
           <Route exact path="/" component={Landing} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
+          <PrivateRoute exact path="/comingsoon" component={ComingSoon} />
+
         </Switch>
       </Router>
     </AuthProvider>
